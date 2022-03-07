@@ -15,9 +15,10 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <h2>React App</h2>
         <Link to="/">Home</Link>
         <Link to="/todos">Todos</Link>
+        <br></br>
+        Home Page
         <Routes>
           <Route path="/todos" element={<TodoList/>}/>
         </Routes>
