@@ -24,7 +24,7 @@ class App extends React.Component {
           All Lists
         </Link>
         <Link to="/todos/new" className="nav">
-          Create a List
+          Create a new List
         </Link>
         <br></br>
         <Routes>
