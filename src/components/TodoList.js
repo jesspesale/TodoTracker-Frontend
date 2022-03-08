@@ -13,11 +13,11 @@ export default function TodoList() {
     dispatch(fetchTodos())
   }, [])
 
-  console.log(todos)
+  // console.log(todos)
 
   return (
   <div>
-    TodoList
+    <h2>Todo Lists</h2>
     {/* {renderTodos()} */}
     {todos && todos.map(todo => {
       return <Todo todo={todo} key={todo.id}/>
