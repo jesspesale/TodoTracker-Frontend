@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import {Routes, Route, Link} from "react-router-dom"
 import TodoList from "./components/TodoList"
+import TodoForm from './components/TodoForm';
 
 
 class App extends React.Component {
@@ -15,12 +16,19 @@ class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <Link to="/">Home</Link>
-        <Link to="/todos">Todos</Link>
+          <Link to="/" className="nav">
+            Home
+          </Link>
+          <Link to="/todos" className="nav">
+            All Lists
+          </Link>
+          <Link to="/todos/new" className="nav">
+            Create a List
+          </Link>
         <br></br>
-        Home Page
         <Routes>
-          <Route path="/todos" element={<TodoList/>}/>
+          <Route path="/todos" element={<TodoList />} />
+          <Route path="/todos/new" element={<TodoForm />} />
         </Routes>
       </div>
     );
