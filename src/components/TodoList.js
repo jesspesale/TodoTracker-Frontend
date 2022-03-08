@@ -2,6 +2,7 @@ import {useEffect} from 'react'
 import {useSelector, useDispatch} from "react-redux"
 import { fetchTodos } from '../redux/todoActions';
 import Todo from './Todo';
+import { Link } from "react-router-dom";
 
 export default function TodoList() {
   const todos = useSelector(state => state);
@@ -20,7 +21,8 @@ export default function TodoList() {
     <h2>Todo Lists</h2>
     {/* {renderTodos()} */}
     {todos && todos.map(todo => {
-      return <Todo todo={todo} key={todo.id}/>
+      return <Link to={`/todos/${todo.id}`}>{todo.title}</Link>;
+      // <Todo todo={todo} key={todo.id}/>
     })}
   </div>
   )

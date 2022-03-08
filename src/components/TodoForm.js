@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { createList } from "../redux/todoActions";
 
 
 export default function TodoForm() {
@@ -8,12 +9,13 @@ export default function TodoForm() {
 
     function handleSubmit(e){
         e.preventDefault()
-
+        dispatch(createList({title: title, completed: false}))
+        setTitle('')
     }
 
   return (
     <div>
-        <form>
+        <form onSubmit={handleSubmit}>
             <label>Title</label>
             <input value={title} onChange={e => setTitle(e.target.value)}/>
         </form>
