@@ -1,15 +1,14 @@
-import React from 'react';
-import './App.css';
-
+import React from 'react'
+import './App.css'
+import {connect} from "react-redux"
+import {fetchLists} from "./redux/listActions"
+import { ADD_LIST } from './redux/constants'
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch("http://localhost:3000/api/v1/lists")
-    .then(res => res.json())
-    .then(data => console.log(data))
+    this.props.fetchLists({type: ADD_LIST,  })
   }
-
   render(){
     return (
         <div>
@@ -19,4 +18,5 @@ class App extends React.Component {
   }
 }
 
-export default App;
+  // connects the component to our store
+export default connect(null, {fetchLists})(App)

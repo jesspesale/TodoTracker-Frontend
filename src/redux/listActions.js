@@ -1,10 +1,10 @@
-import {SET_TODOS, ADD_LIST} from './constants'
+import { GET_LISTS, ADD_LIST } from "./constants";
 
-export function fetchTodos(){
+export function fetchLists(action){
     return (dispatch) => {
         fetch("http://localhost:3000/api/v1/lists")
           .then((res) => res.json())
-          .then((todos) => dispatch({ type: SET_TODOS, payload: todos }));
+          .then((lists) => dispatch({ type: GET_LISTS, payload: lists }));
     }
 }
 
