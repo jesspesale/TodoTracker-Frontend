@@ -1,13 +1,8 @@
-import { SET_TODOS, ADD_LIST } from "./constants";
-
-
-export default function todoReducer(state = [], action){
+export default function todoReducer(state = {todo: []}, action){
     switch(action.type) {
-        case SET_TODOS: 
-            return action.payload
-        case ADD_LIST:
-            console.log(action.payload)
-            // return [...state, action.payload]
+    //     case value: 
+    //     break;
+
         default: 
             return state
     }
