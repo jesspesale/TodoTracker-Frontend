@@ -1,11 +1,9 @@
-import {SET_TODOS} from './constants'
+import { SET_TODOS } from "./constants";
 
-export default function todoReducer(state = {todo: []}, action){
+export default function todoReducer(state = [], action){
     switch(action.type) {
-        case "SET_TODOS": 
-        console.log(state)
+        case SET_TODOS: 
             return action.payload
-        break;
 
         default: 
             return state
