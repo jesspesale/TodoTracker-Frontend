@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createList } from "../redux/todoActions";
+import { createList } from "../../redux/todoActions";
 
 
-export default function TodoForm() {
-    const [title, setTitle] = useState('')
-    const dispatch = useDispatch();
+export default function ListForm() {
 
     function handleSubmit(e){
         e.preventDefault()
