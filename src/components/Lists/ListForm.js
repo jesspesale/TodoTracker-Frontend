@@ -1,22 +1,26 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { createList } from "../../redux/todoActions";
+import { createList } from "../../redux/listActions";
 
 
-export default function ListForm() {
+class ListForm extends React.Component {
 
-    function handleSubmit(e){
-        e.preventDefault()
-        dispatch(createList({title: title, completed: false}))
-        setTitle('')
-    }
+    // function handleSubmit(e){
+    //     e.preventDefault()
+    //     console.log(e.target.value)
+    // }
 
-  return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <label>Title</label>
-            <input value={title} onChange={e => setTitle(e.target.value)}/>
-        </form>
-    </div>
-  )
+  render(){
+    return (
+      <div>
+          <form onSubmit={handleSubmit}>
+              <label>Title</label>
+              <input value={title} onChange={e => setTitle(e.target.value)}/>
+          </form>
+      </div>
+    )
+  }
+
 }
+
+export default ListForm
