@@ -3,6 +3,7 @@ import './App.css'
 import {connect} from "react-redux"
 import {fetchLists} from "./redux/listActions"
 import { ADD_LIST } from './redux/constants'
+import ListsContainer from './containers/ListsContainer'
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
     return (
         <div>
               App
+              <ListsContainer/>
         </div>
     );
   }

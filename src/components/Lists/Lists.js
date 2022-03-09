@@ -1,5 +1,5 @@
 
-export default function Lists() {
+export default function Lists(props) {
 
   // console.log(todos)
 

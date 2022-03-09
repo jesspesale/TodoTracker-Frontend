@@ -13,12 +13,13 @@ class ListForm extends React.Component {
   render(){
     return (
       <div>
-          <form onSubmit={handleSubmit}>
-              <label>Title</label>
-              <input value={title} onChange={e => setTitle(e.target.value)}/>
-          </form>
+        {/* onSubmit={handleSubmit} */}
+        <form>
+          <label>Title</label>
+          {/* <input value={title} onChange={e => setTitle(e.target.value)}/> */}
+        </form>
       </div>
-    )
+    );
   }
 
 }
