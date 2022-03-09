@@ -1,9 +1,10 @@
 import { GET_LISTS, ADD_LIST } from "../constants";
 
-export function fetchLists(action){
+export function fetchLists(){
     return (dispatch) => {
         fetch("http://localhost:3000/api/v1/lists")
           .then((res) => res.json())
+        //   .then(lists => console.log(lists))
           .then((lists) => dispatch({ type: GET_LISTS, payload: lists }));
     }
 }

@@ -3,7 +3,7 @@ import ListForm from '../components/Lists/ListForm'
 import Lists from '../components/Lists/Lists'
 import { connect } from 'react-redux'
 import { fetchLists } from '../redux/listActions'
-import {ADD_LIST} from "../constants.js"
+import {GET_LISTS} from "../constants"
 
 
 class ListsContainer extends Component {
